@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script>
+        document.cookie = 'resolution=' + Math.max(screen.width, screen.height) + '; path=/';
+    </script> -->
+
+    <!--responsive YT video-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/jquery.fitvids.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Target your .container, .wrapper, .post, etc.
+            $("#content").fitVids();
+        });
+    </script>
+    <!--responsive YT video-->
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/media.css"> -->
+
+
+    <title>AND THE WINNER ISN'T</title>
+</head>
+
+<body id="quiz">
+    <div id="wrapper">
+        <!--top colontitle and navbar-->
+        <header role="header">
+            <a href="#">
+                <div id="logo">
+                    And winner is
+                    <span>n't...</span>
+                </div>
+            </a>
+
+            <nav role="navbar">
+                <ul>
+                    <li class="internal"><a href="index.html">WHY?</a></li>
+                    <li class="internal"><a href="#">ABOUT</a></li>
+                    <li class="internal"><a href="#">OFFLINE</a></li>
+                    <li class="internal"><a href="redemption.html">REDEMPTION</a></li>
+                    <li class="internal"><a href="videosClips.html"> VIDEOS/CLIPS</a></li>
+                    <li class="internal"><a href="quiz.html">QUIZ</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--content-->
+
+        <div id="content" rol="main">
+            <form method="POST" id="redemption" autocomplete="off">
+                <hgroup>
+                    <h1>Oscar Redemption</h1>
+                    <h2>Here's your chance to set the record straight: tell us what year the wrong film got nominated, and which film <b>should</b> have received a nod...</h2>
+                </hgroup>
+                <fieldset>
+                    <legend>About the offending film (part 1 of 3)</legend>
+                    <div>
+                        <label for="film">The film in question?</label>
+                        <input type="text" id="film" name="film" placeholder="e.g Fast Forious" required aria-required="true">
+                    </div>
+                    <div>
+                        <label for="yearOfCrime">Year Of Crime</label>
+                        <input type="number" min="2000" max="2020" id="yearOfCrime" name="yearOfCrime" required aria-required="true">
+                    </div>
+                    <div>
+                        <label for="awardWon">Award Won</label>
+                        <input type="text" id="awardWon" name="awardWon" list="awards">
+                        <datalist id="awards">
+                            <select>
+                                <option value="first"></option>
+                                <option value="second"></option>
+                                <option value="third"></option>
+                                <option value="fourth"></option><option value="fifth"></option>
+                            </select>
+                        </datalist>
+                    </div>
+                    <div>
+                        <label for="why">Tell us why that's wrong?</label>
+                        <textarea name="why" id="why" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <label for="range">How you rate it (1 is woeful, 10 is awesomesauce)</label>
+                        <input id="howYRI" type="range" name="howYRI" min="1" max="10" value="8" onchange="showValue(this.value)"><span id="range">8</span>
+                    </div>
+                    <script>
+                        function showValue(newValue) {
+                            document.getElementById("range").innerHTML = newValue;
+                        }
+                    </script>
+
+                </fieldset>
+                <fieldset>
+                    <legend>About the offending film (part 2 of 3)</legend>
+
+                    <div>
+                        <label for="yearOfCrime">Year Of Crime</label>
+
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>About the offending film (part 3 of 3)</legend>
+                    <div>
+                        <label for="name">Your Name</label>
+                        <input id="name" name="name" pattern="([a-zA-Z]{3,30}\s*)+[a-zA-Z]{3,30}" placeholder="Bekzod Kholdarov" required aria-required="true">
+                    </div>
+                    <div>
+                        <label for="color">Your Favorite Color</label>
+                        <input type="color" id="color" name="color">
+                    </div>
+                    <div>
+                        <label for="date">Date/Time</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div>
+                        <label for="month">Month</label>
+                        <input type="month" id="month" name="month">
+                    </div>
+                    <div>
+                        <label for="week">Week</label>
+                        <input type="week" id="week" name="week">
+                    </div>
+                    <div>
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time">
+                    </div>
+                    <div>
+                        <label for="datetime-local">Datetime-Local</label>
+                        <input type="datetime-local" id="datetime-local" name="datetime-local">
+                    </div>
+                    <div>
+                        <label for="tel">Telephone (so we can berate you if you're wrong)</label>
+                        <input type="tel" id="tel" name="tel" placeholder="998 98 9989898" required aria-required="true" autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="email">Your Email address</label>
+                        <input type="email" name="email" id="email" placeholder="bekzod@gmail.com" required aria-required="true">
+                    </div>
+                    <div>
+                        <label for="web">Your Web Adress</label>
+                        <input type="url" id="web" name="web" placeholder="www.bekdev.group.com">
+                    </div>
+                </fieldset>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!--cutting-->
+        <aside>
+            <section role="complementary">
+                <div class="sideBlock unSung">
+                    <h2>UNSUNG HEROES...</h2>
+                    <div class="box">
+                        <a href="#">
+                            <img src="assets/img/midnightRun.jpg" alt="">
+                            <span>more info</span>
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/midnightRun.jpg" alt="">
+                            <span>more info</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section role="complementary">
+                <div class="sideBlock overHyped">
+                    <h2>OVERHYPED NONSENSE...</h2>
+                    <div class="box">
+                        <a href="#">
+                            <img src="assets/img/midnightRun.jpg" alt="">
+                            <span>more info</span>
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/midnightRun.jpg" alt="">
+                            <span>more info</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+        </aside>
+        <!--footer-->
+        <footer role="contentinfo" id="footer">
+            <p>NOTE: OUR OPINION IS ABSOLUTELY CORRECT. YOU ARE WRONG, EVEN IF YOU THINK YOU ARE RIGHT. THAT’S A FACT. DEAL WITH IT. MADE BY BENFRAIN.COM. SITE CODE AS ZIP FILE</p>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <h1>Google</h1><br>
+    <h1>gOogle</h1><br>
+    <h1>goOgle</h1><br>
+    <h1>gooGle</h1><br>
+    <h1>googLe</h1><br>
+    <h1>googlE</h1> -->
+
+    <!-- <a href="#"><span>Just Text</span></a>
+    <a href="#"><span>Just Text</span></a>
+    <a href="#"><span>Just Text</span></a> -->
+
+    <!-- <style>
+        a {
+            color: black;
+            text-decoration: none;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 0.8em;
+            padding-right: 0.8em;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            background-image: linear-gradient(rgb(0, 38, 165), rgb(255, 255, 255), rgb(255, 7, 7));
+            ;
+
+        }
+
+        body {
+            background-color: grey;
+        }
+
+        @media screen and (max-width: 960px) {
+            body {
+                background-color: rgb(0, 0, 0);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: rgb(255, 255, 255);
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            body {
+                background-color: rgb(0, 0, 0);
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            body {
+                background-color: rgb(255, 255, 255);
+            }
+        }
+    </style> -->
+</body>
+
+</html>
